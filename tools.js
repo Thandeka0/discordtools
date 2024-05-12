@@ -65,3 +65,8 @@ function getGuildCount() {
       console.error(error);
     });
 }
+
+function logout() {
+  localStorage.removeItem("token");
+  window.location.reload()
+}
