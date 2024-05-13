@@ -42,7 +42,7 @@ const getGuildCount = async () => {
     await handleErrors(response);
     const data = await response.json();
     const guild_count = data.filter((item) => item.hasOwnProperty("id")).length;
-    showToast("Servers: " + guild_count, "#111c1d", "#e2fcfa");
+    document.getElementById('server-count').innerText = `Servers: ${guild_count}`
   } catch (error) {
     console.error(error);
   }

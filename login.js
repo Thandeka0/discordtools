@@ -21,9 +21,7 @@ async function isValid() {
 
 loginbutton.addEventListener("click", async function () {
     if (await isValid()) {
-      console.log("Token is valid:", tokeninput.value);
       localStorage.setItem("token", tokeninput.value);
-      console.log("Token set in localStorage:", localStorage.getItem("token"));
       window.location.href = "./index.html";
     } else {
       alert("Invalid token!");
